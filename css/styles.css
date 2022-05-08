@@ -65,9 +65,11 @@ img {
     display: flex;
 }
 
+.header .nav{
+    align-items: center;
+}
+
 .header .logo {
-    margin-top: 24px;
-    margin-bottom: 25px;
     margin-right: 93px;
 }
 
