@@ -285,24 +285,17 @@ img {
     text-align: center;
 }
 
-/* Позиционирование Подвала*/
-
-.footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-
-.footer-address {
-    margin-top: 20px;
-}
-
-
 /*=====================
     Вкладка Портфолио
   =====================*/
 
 /*---- Кнопки-фильтры ----*/ 
 .portfolio-btn {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-left: 22px;
+    padding-right: 22px;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
@@ -311,6 +304,7 @@ img {
     cursor: pointer;
     background: #F5F4FA;
     border: none;
+    border-radius: 4px;
 }
 
 .portfolio .btn-active,
@@ -320,6 +314,23 @@ img {
     background: var(--accent-color);
 }
 
+/* Позиционирование и стилизация кнопок фильтра*/
+.button-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.button-list > .item + .item {
+    margin-left: 8px;
+}
+
+/* Тень на активную кнопку*/
+.portfolio .btn-active {
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+
 
 /*---- Список проектов ----*/
 .project-card {
@@ -327,6 +338,8 @@ img {
 }
 
 .project-title {
+    margin-bottom: 4px;
+
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
@@ -339,6 +352,31 @@ img {
     line-height: 1.88;
     letter-spacing: 0.03em;
     color: #757575;
+}
+
+/* Позиционирование Списка проектов*/
+.project-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -30px;
+    margin-bottom: -30px;
+}
+
+/* Для легкого изменения кол-ва проектов в строке*/
+.project-list > .item {
+    flex-basis: calc((100% / 3) - 30px);
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+.project-description {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    border: 1px solid #EEEEEE;
+    border-top: none;
 }
 
 
@@ -363,4 +401,15 @@ img {
 .contacts .link:hover,
 .contacts .link:focus {
     color: var(--accent-color);
+}
+
+/* Позиционирование Футера*/
+
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer-address {
+    margin-top: 20px;
 }
